@@ -51,9 +51,10 @@ class MyHandler(http.server.BaseHTTPRequestHandler):
         url_list = str(data, 'utf-8').split(',')
         ret = ''
         for url in url_list:
-            r = requests.get(url)
-            print("{} : {}".format(url, r.text[:100]))
-            ret += r.text
+            if (url != ''):
+                r = requests.get(url)
+                print("{} : {}".format(url, r.text[:100]))
+                ret += r.text
         ret = removeIntegers(ret)
         ret = deDuplicate(ret)
         ret = ret.strip()

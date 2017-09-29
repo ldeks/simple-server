@@ -13,7 +13,7 @@ nthreads = int(sys.argv[1])
 
 def client_method():
     fnames = ''
-    nfiles = random.randrange(2, max_file_count)
+    nfiles = random.randrange(0, max_file_count)
     for i in range(nfiles):
         fname = data_url + str(random.randrange(1, max_file_name + 1))
         if i != 0:
