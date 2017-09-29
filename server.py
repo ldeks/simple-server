@@ -10,7 +10,7 @@ import requests
 ##  Text methods
 # Remove integers
 def removeIntegers(text):
-    for i in range(9):
+    for i in range(10):
         text = text.split(str(i))
         text = ''.join(text)
     return text
