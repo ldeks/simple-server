@@ -20,7 +20,7 @@ def client_method():
             fnames += ','
         fnames += fname
     print(fnames)
-    r = requests.post("http://{}:{}".format(HOST, PORT), data = fnames, headers={"Content-Length" : len(fnames) } )
+    r = requests.post("http://{}:{}".format(HOST, PORT), data = fnames, headers={"Content-Length" : str(len(fnames)) } )
     print(r.text)
 
 # Make threads doing this.

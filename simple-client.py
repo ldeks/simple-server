@@ -7,5 +7,5 @@ data_url = "http://localhost:3000/test_data/file"
 
 datastr = data_url + "1," + data_url + "2"
 
-r = requests.post("http://{}:{}".format(HOST, PORT), data = datastr, headers={"Content-Length" : len(datastr) } )
+r = requests.post("http://{}:{}".format(HOST, PORT), data = datastr, headers={"Content-Length" : str(len(datastr)) } )
 print(r.text)
