@@ -10,3 +10,6 @@ A little Python 3 server.
 
 3. The simple client can be invoked like so:
 `python3 simple-client.py`
+
+4. The multithreaded client can be invoked like so:
+`python3 client-multithread.py [int_number_of_threads]`
